@@ -1,0 +1,12 @@
+wc -l — три самых частых вызова:
+  27 вызовов  mmap
+  23 вызовов  read
+  12 вызовов  openat
+python3 count_one.py — три самых частых вызова:
+  139 вызовов  read
+  76 вызовов  newfstatat
+  66 вызовов  rt_sigaction
+
+Всего вызовов:
+  wc -l:    138
+  python3:  515

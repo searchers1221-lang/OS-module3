@@ -1,0 +1,71 @@
+
+[N=4] время: 1.15 с
+ИТОГО: запросов 600000, ответов 5xx 2580 (0.430%)
+
+ДОЛЯ 5xx ПО ПУТЯМ (от большей к меньшей)
+путь                запросов     5xx     доля
+/api/payment           24161     182    0.75%
+/login                 36011     168    0.47%
+/api/cart             101555     434    0.43%
+/api/products         108339     458    0.42%
+/                      72316     298    0.41%
+/api/search            36141     148    0.41%
+/api/orders           101761     411    0.40%
+/static/app.js        119716     481    0.40%
+
+ДОЛЯ 5xx ПО ФАЙЛАМ
+файл              запросов     5xx     доля
+access_01.log        15000      58    0.39%
+access_02.log        15000      62    0.41%
+access_03.log        15000      82    0.55%
+access_04.log        15000      57    0.38%
+access_05.log        15000      74    0.49%
+access_06.log        15000      57    0.38%
+access_07.log        15000      53    0.35%
+access_08.log        15000      60    0.40%
+access_09.log        15000      55    0.37%
+access_10.log        15000      61    0.41%
+access_11.log        15000      64    0.43%
+access_12.log        15000      60    0.40%
+access_13.log        15000      55    0.37%
+access_14.log        15000      62    0.41%
+access_15.log        15000      73    0.49%
+access_16.log        15000      54    0.36%
+access_17.log        15000     149    0.99%
+access_18.log        15000      63    0.42%
+access_19.log        15000      57    0.38%
+access_20.log        15000      64    0.43%
+access_21.log        15000      52    0.35%
+access_22.log        15000      59    0.39%
+access_23.log        15000      55    0.37%
+access_24.log        15000      48    0.32%
+access_25.log        15000      69    0.46%
+access_26.log        15000      57    0.38%
+access_27.log        15000      79    0.53%
+access_28.log        15000      69    0.46%
+access_29.log        15000     132    0.88%
+access_30.log        15000      60    0.40%
+access_31.log        15000      57    0.38%
+access_32.log        15000      59    0.39%
+access_33.log        15000      58    0.39%
+access_34.log        15000      56    0.37%
+access_35.log        15000      54    0.36%
+access_36.log        15000      58    0.39%
+access_37.log        15000      63    0.42%
+access_38.log        15000      53    0.35%
+access_39.log        15000      68    0.45%
+access_40.log        15000      54    0.36%
+
+СБОЙ: пары (файл, путь) с наибольшей долей 5xx (не меньше 30 запросов)
+файл            путь                запросов   5xx     доля
+access_17.log   /api/payment             587    97    16.5%
+access_29.log   /api/payment             601     8     1.3%
+access_29.log   /api/search              858    11     1.3%
+access_05.log   /login                   860    11     1.3%
+access_29.log   /                       1849    21     1.1%
+
+=> Сбой: путь /api/payment в файле access_17.log (97 ошибок 5xx из 587 запросов)
+
+--- ps: процессы, у которых родитель — наш скрипт, и все зомби (STAT=Z) ---
+    PID    PPID STAT COMMAND
+ЗОМБИ НЕТ
